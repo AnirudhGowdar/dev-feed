@@ -1,11 +1,11 @@
-import React, { Fragment, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import DashboardActions from './DashboardActions';
-import Experience from './Experience';
-import Education from './Education';
-import { getCurrentProfile, deleteAccount } from '../../actions/profile';
+import React, { Fragment, useEffect } from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import DashboardActions from "./DashboardActions";
+import Experience from "./Experience";
+import Education from "./Education";
+import { getCurrentProfile, deleteAccount } from "../../actions/profile";
 
 const Dashboard = ({
 	getCurrentProfile,
@@ -18,7 +18,7 @@ const Dashboard = ({
 	}, [getCurrentProfile]);
 
 	return (
-		<Fragment>
+		<section className='container'>
 			<h1 className='large text-primary'>Dashboard</h1>
 			<p className='lead'>
 				<i className='fas fa-user' /> Welcome {user && user.name}
@@ -49,7 +49,7 @@ const Dashboard = ({
 					</Link>
 				</Fragment>
 			)}
-		</Fragment>
+		</section>
 	);
 };
 
