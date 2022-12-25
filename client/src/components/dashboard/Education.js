@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import Moment from 'react-moment';
-import { connect } from 'react-redux';
-import { deleteEducation } from '../../actions/profile';
+import React, { Fragment } from "react";
+import PropTypes from "prop-types";
+import Moment from "react-moment";
+import { connect } from "react-redux";
+import { deleteEducation } from "../../actions/profile";
 
 const Education = ({ education, deleteEducation }) => {
 	const educations = education.map((edu) => (
@@ -11,9 +11,9 @@ const Education = ({ education, deleteEducation }) => {
 			<td>{edu.fieldofstudy}</td>
 			<td className='hide-sm'>{edu.degree}</td>
 			<td>
-				<Moment format='YYYY/MM/DD'>{edu.from}</Moment> -{' '}
+				<Moment format='YYYY/MM/DD'>{edu.from}</Moment> -{" "}
 				{edu.to === null ? (
-					' Now'
+					" Now"
 				) : (
 					<Moment format='YYYY/MM/DD'>{edu.to}</Moment>
 				)}
@@ -38,7 +38,6 @@ const Education = ({ education, deleteEducation }) => {
 						<th>Field of study</th>
 						<th className='hide-sm'>Degree</th>
 						<th className='hide-sm'>Years</th>
-						<th />
 					</tr>
 				</thead>
 				<tbody>{educations}</tbody>

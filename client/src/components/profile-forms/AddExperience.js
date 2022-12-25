@@ -1,35 +1,28 @@
-import React, { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { addExperience } from '../../actions/profile';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { addExperience } from "../../actions/profile";
 
 const AddExperience = ({ addExperience, history }) => {
 	const [formData, setFormData] = useState({
-		company: '',
-		title: '',
-		location: '',
-		from: '',
-		to: '',
+		company: "",
+		title: "",
+		location: "",
+		from: "",
+		to: "",
 		current: false,
-		description: ''
+		description: ""
 	});
 
-	const {
-		company,
-		title,
-		location,
-		from,
-		to,
-		current,
-		description
-	} = formData;
+	const { company, title, location, from, to, current, description } =
+		formData;
 
 	const onChange = (e) =>
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 
 	return (
-		<Fragment>
+		<section className='container'>
 			<h1 className='large text-primary'>Add An Experience</h1>
 			<p className='lead'>
 				<i className='fas fa-code-branch' /> Add any
@@ -91,7 +84,7 @@ const AddExperience = ({ addExperience, history }) => {
 							onChange={() => {
 								setFormData({ ...formData, current: !current });
 							}}
-						/>{' '}
+						/>{" "}
 						Current Job
 					</p>
 				</div>
@@ -120,7 +113,7 @@ const AddExperience = ({ addExperience, history }) => {
 					Go Back
 				</Link>
 			</form>
-		</Fragment>
+		</section>
 	);
 };
 

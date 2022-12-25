@@ -1,22 +1,22 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { createProfile, getCurrentProfile } from '../../actions/profile';
+import React, { Fragment, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { createProfile, getCurrentProfile } from "../../actions/profile";
 
 const initialState = {
-	company: '',
-	website: '',
-	location: '',
-	status: '',
-	skills: '',
-	githubusername: '',
-	bio: '',
-	twitter: '',
-	facebook: '',
-	linkedin: '',
-	youtube: '',
-	instagram: ''
+	company: "",
+	website: "",
+	location: "",
+	status: "",
+	skills: "",
+	githubusername: "",
+	bio: "",
+	twitter: "",
+	facebook: "",
+	linkedin: "",
+	youtube: "",
+	instagram: ""
 };
 
 const ProfileForm = ({
@@ -40,7 +40,7 @@ const ProfileForm = ({
 				if (key in profileData) profileData[key] = profile.social[key];
 			}
 			if (Array.isArray(profileData.skills))
-				profileData.skills = profileData.skills.join(', ');
+				profileData.skills = profileData.skills.join(", ");
 			setFormData(profileData);
 		}
 	}, [loading, getCurrentProfile, profile]);
@@ -69,7 +69,7 @@ const ProfileForm = ({
 	};
 
 	return (
-		<Fragment>
+		<section className='container'>
 			<h1 className='large text-primary'>Edit Your Profile</h1>
 			<p className='lead'>
 				<i className='fas fa-user' /> Add some changes to your profile
@@ -249,7 +249,7 @@ const ProfileForm = ({
 					Go Back
 				</Link>
 			</form>
-		</Fragment>
+		</section>
 	);
 };
 
