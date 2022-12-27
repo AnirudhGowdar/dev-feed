@@ -13,8 +13,8 @@ RUN npm install --silent
 # Copies everything over to Docker environment
 COPY . .
 
-# Exposes the client port
-EXPOSE 3000
+# Exposes the server port
+EXPOSE 5000
 
 # Starts the server
 CMD ["npm", "start"]
