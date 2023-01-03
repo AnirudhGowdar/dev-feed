@@ -2,13 +2,13 @@
 
 ## About
 
-A simple social network app for developers complete with an integration to showcase github repositories using github username.
+A simple social network app for developers complete with an integration to showcase github repositories using github username. Hosted on render using static frontend build: [devfeed](https://devfeed.onrender.com)
 
 ### Built with
 
-* [![React][React.js]][React-url]
-* [![Express][Express]][Express-url]
-* [![MongoDB][MongoDB]][MongoDB-url]
+[![React][React.js]][React-url]  
+[![Express][Express]][Express-url]  
+[![MongoDB][MongoDB]][MongoDB-url]  
 
 ## Getting Started
 
@@ -20,6 +20,8 @@ A simple social network app for developers complete with an integration to showc
 4. Create a default.json file with `mongoURI` value obtained from step 1 and a `jwtToken` value containing any long string of characters. Also provide a github commandline token with `githubToken` as the key.
 5. Use `npm run client` to run frontend and `npm run server` to run backend. Use `npm run dev` to concurrently run and update both the servers.
 
+#### default.json format
+
 ```json
 {
     "mongoURI": "YOUR_MONGO_URI_STRING_HERE",
@@ -27,7 +29,6 @@ A simple social network app for developers complete with an integration to showc
     "githubToken": "GITHUB_COMMANDLINE_TOKEN"
 }
 ```
-
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
