@@ -15,8 +15,8 @@ A simple social network app for developers complete with an integration to showc
 ### Development
 
 1. Sign up at [MongoDB Atlas](https://www.mongodb.com/atlas/database) to create a new MongoDB cluster OR use a locally running empty instance of mongoDB.
-2. Clone this repository: `https://github.com/AnirudhGowdar/dev-feed.git`
-3. Run `npm run setup` to install required packages.
+2. Clone this repository: `git clone https://github.com/AnirudhGowdar/dev-feed.git`
+3. Run `npm run setup` at the root of the cloned directory to install required packages.
 4. Create a default.json file with `mongoURI` value obtained from step 1 and a `jwtToken` value containing any long string of characters. Also provide a github commandline token with `githubToken` as the key.
 5. Use `npm run client` to run frontend and `npm run server` to run backend. Use `npm run dev` to concurrently run and update both the servers.
 
