@@ -108,6 +108,7 @@ router.post(
 // @access Public
 router.get("/", async (req, res) => {
 	try {
+		await new Promise((resolve) => setTimeout(resolve, 3000));
 		const profiles = await Profile.find().populate("user", [
 			"name",
 			"avatar"
@@ -294,7 +295,9 @@ router.get("/github/:username", async (req, res) => {
 		);
 		const headers = {
 			"user-agent": "node.js",
-			Authorization: `token ${process.env.githubToken || config.get("githubToken")}`
+			Authorization: `token ${
+				process.env.githubToken || config.get("githubToken")
+			}`
 		};
 
 		const gitHubResponse = await axios.get(uri, { headers });
